@@ -187,13 +187,12 @@ span{
     gap: 2rem;
 }
 .formulario__campo {
-   border: 1rem solid var(--primarioOscuro);
-   background-color: transparent;
-   color: var(--blanco);
-   font-size: 2rem; 
-   font-family: Arial, Helvetica, sans-serif;
-   padding: 1rem;
-   appearance: none;
+    border: 1rem solid var(--primarioOscuro);
+    background-color: transparent;
+    font-size: 2rem; 
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none;
 }
 .formulario__submit {
     background-color: var(--secundario);
@@ -207,4 +206,59 @@ span{
 .formulario__submit:hover {
     cursor: pointer;
     background-color: var(--secundarioOscuro);
+}
+
+/** Paginas**/
+.entrada-blog a {
+    display: inline-block;
+    background-color: var(--secundarioOscuro);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/** Dos columnas con GRID**/
+@media (min-width: 768px) {
+  .dos-columnas {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-columns: repeat(2, 50%);
+      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 2rem;
+  }
+}
+
+/** Tres columnas iguales GRID **/
+
+/* Media Query para pantallas medianas o más grandes (min-width: 768px) */
+@media (min-width: 768px) {
+  /* Contenedor con tres columnas utilizando CSS Grid */
+
+  /* Establece el contenedor como un grid container con tres columnas del mismo tamaño y espacio entre columnas */
+  .tres-columnas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 2rem; /* Espacio entre las columnas */
+  }
+}
+
+/** Tres columnas (1 mas grande) **/
+
+@media (min-width: 768px) {
+    .contenedor-grid {
+        display: grid;
+        grid-template-areas: "izquierda contenido derecha";
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-auto-flow: column;
+        column-gap: 2rem;
+    }
+    .contenido-principal {
+        grid-area: contenido;
+    }
+
+    .sidebar-1 {
+        grid-area: izquierda;
+    }
 }
