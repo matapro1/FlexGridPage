@@ -2,27 +2,28 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>3 Columnas Iguales-grid</title>
-    <!-- Se carga Normalize.css para normalizar estilos en diferentes navegadores -->
+    <title>Patrones Responsive Web Design - 2 Columnas</title>
     <link
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
-    <!-- Se enlaza la fuente Raleway y la hoja de estilos principal "styles.css" -->
     <link
       href="https://fonts.googleapis.com/css?family=Raleway:400,700,900"
       rel="stylesheet"
     />
-    <!-- Se carga una hoja de estilos local "styles.css" -->
-    <link rel="stylesheet" href="css/3-col-grid.css" />
-    <!-- Se establece la escala en dispositivos móviles -->
+    <link rel="stylesheet" href="css/grid-1.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
 
   <body>
-    <!-- Contenedor principal con tres columnas -->
-    <div class="contenedor tres-columnas">
-      <!-- Primer artículo de blog -->
+    <nav class="navegacion">
+      <a class="navegacion__enlace navegacion__enlace--activo" href="index.html"
+        >Grid</a
+      >
+      <a class="navegacion__enlace" href="flexbox.html">Flexbox</a>
+    </nav>
+    <div class="contenedor dos-columnas">
       <article class="entrada-blog">
         <h1>Titulo Entrada Blog</h1>
         <img src="img/imagen1.jpg" />
@@ -33,23 +34,9 @@
         </p>
         <a href="#">Leer más</a>
       </article>
-
-      <!-- Segundo artículo de blog -->
       <article class="entrada-blog">
         <h1>Titulo Entrada Blog</h1>
         <img src="img/imagen2.jpg" />
-        <p>
-          Maecenas maximus urna vitae nisl semper, id volutpat ipsum
-          scelerisque. Aenean nec ipsum finibus, eleifend dolor at, venenatis
-          risus. Quisque varius orci et augue scelerisque luctus.
-        </p>
-        <a href="#">Leer más</a>
-      </article>
-
-      <!-- Tercer artículo de blog -->
-      <article class="entrada-blog">
-        <h1>Titulo Entrada Blog</h1>
-        <img src="img/imagen3.jpg" />
         <p>
           Maecenas maximus urna vitae nisl semper, id volutpat ipsum
           scelerisque. Aenean nec ipsum finibus, eleifend dolor at, venenatis

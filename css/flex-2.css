@@ -1,0 +1,75 @@
+/* Reset de estilos y configuración base para la página */
+
+/* Establece el modelo de caja para incluir el padding y el border en el ancho y alto */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* Establece el tamaño de fuente base a 10px para facilitar cálculos */
+}
+
+/* Hereda el box-sizing de html para todos los elementos y pseudo-elementos */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Configuración de estilos generales para el cuerpo del documento */
+
+/* Configuración de la fuente y el tamaño de fuente base */
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem; /* Tamaño de fuente base de 16px */
+}
+
+/* Estilos para las imágenes, asegurando que no se desborden de sus contenedores */
+img {
+  max-width: 100%;
+}
+
+/* Estilos para los encabezados h1 */
+h1 {
+  font-size: 4rem; /* Tamaño de fuente grande para h1 */
+}
+
+/* Estilos para el contenedor principal */
+
+/* Limita el ancho máximo del contenedor, establece el ancho al 95% y lo centra en la página */
+.contenedor {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* Estilos para los enlaces dentro de las entradas del blog */
+
+/* Convierte los enlaces en bloques, les da color de fondo, color de texto blanco, y estilos adicionales */
+.entrada-blog a {
+  display: inline-block;
+  background-color: #2196F3;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/** CODIGO AQUI **/
+
+/* Media Query para pantallas de al menos 768px de ancho */
+
+@media (min-width: 768px) {
+  /* Estilos para el contenedor con tres columnas utilizando Flexbox */
+
+  /* Establece el contenedor como un flex container y distribuye el espacio entre los elementos */
+  .tres-columnas {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  /* Establece el tamaño y comportamiento de las entradas del blog dentro del contenedor flex */
+
+  /* Establece el tamaño específico para cada entrada del blog, ocupando el 33.3% del ancho menos 1rem de espacio entre ellas */
+  .entrada-blog {
+      flex: 0 0 calc(33.3% - 1rem);
+  }
+}
