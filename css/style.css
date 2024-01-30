@@ -162,6 +162,11 @@ span{
     .bloques {
         grid-template-columns: repeat(4, 1fr);
     }
+    .bloques img{
+      width: 15rem;
+      height: 15rem;
+       ;
+    }
 }
 
 .bloque {
